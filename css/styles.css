@@ -195,21 +195,47 @@ span {
   border: none;
   color: #ffffff;
 }
+.modal-wnd {
+  background-color: none;
+  border: none;
+  padding: 0;
+}
+.modal-wnd::backdrop {
+  background: rgba(46, 47, 66, 0.4);
+  width: 100%vh;
+  height: 100%vh;
+}
 .hero-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 0 24px;
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   border-radius: 4px;
   background: #fcfcfc;
 }
-.hero-icon-close {
+.close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: none;
+  background: none;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.close-button:hover,
+.close-button:focus {
+  background: none;
+}
+.hero-icon-close {
   background-color: #e7e9fc;
   fill: #2e2f42;
   outline: 1px solid rgba(0, 0, 0, 0.1);
@@ -232,18 +258,13 @@ span {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-top: 74px;
 }
 .hero-inputs {
   display: flex;
   flex-direction: column;
   gap: 8px;
   align-items: flex-start;
-}
-.hero-inputs input {
-  width: 360px;
-  height: 40px;
-  border-radius: 4px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
 }
 .input-container {
   position: relative;
@@ -258,7 +279,11 @@ span {
   border: 1px solid #4d5ae5;
 }
 .hero-inputs-item {
-  padding: 8px 38px;
+  padding-left: 38px;
+  width: 360px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
 }
 .hero-inputs-icon {
   position: absolute;
