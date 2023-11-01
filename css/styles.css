@@ -635,27 +635,14 @@ span {
   gap: 16px;
 }
 .modal-inputs-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  align-items: flex-start;
+  margin-bottom: 8px;
 }
 .modal-input-item {
   position: relative;
-  transition-property: border, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-input-item:hover,
-.modal-input-item:focus {
-  fill: #4d5ae5;
-  border-radius: 4px;
-  border: 1px solid #4d5ae5;
 }
 .modal-input-label {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  display: block;
+  margin-bottom: 4px;
   align-items: flex-start;
   font-size: 12px;
   font-weight: 400;
@@ -669,13 +656,29 @@ span {
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: transparent;
   background-color: transparent;
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input-area:hover,
+.modal-input-area:focus {
+  border-radius: 4px;
+  border: 1px solid #4d5ae5;
 }
 .modal-input-icon {
   position: absolute;
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input-icon:hover,
+.modal-input-icon:focus {
+  fill: #4d5ae5;
 }
 .modal-comment {
   resize: none;
@@ -690,6 +693,7 @@ span {
   letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
   background-color: transparent;
+  outline: transparent;
   transition-property: border, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
