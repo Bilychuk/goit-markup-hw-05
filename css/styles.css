@@ -719,11 +719,6 @@ span {
   overflow: hidden;
 }
 .modal-accept-text {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
@@ -735,6 +730,7 @@ span {
   justify-content: center;
   align-items: center;
   fill: transparent;
+  margin-right: 8px;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
