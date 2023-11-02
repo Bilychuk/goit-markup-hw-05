@@ -746,6 +746,7 @@ span {
 .modal-accept-input:checked + .modal-accept-text > .modal-accept-box {
   fill: #f4f4fd;
   background-color: #404bbf;
+  border: none;
 }
 
 .modal-link {
